@@ -233,7 +233,7 @@ begin
   y := y + Canvas.Font.Height;
   Canvas.DrawString(5, y, 'Russian (UTF-8) text: Невозможно создать директорию');
   y := y + Canvas.Font.Height;
-  fnt := fpgApplication.GetFont('Times-14:bold');
+  fnt := fpgApplication.GetFont('DejaVu-14:bold');
   Canvas.Font := fnt;
   Canvas.DrawString(5, y, 'Font used is ' + Canvas.Font.FontDesc);
   y := y + Canvas.Font.Height;

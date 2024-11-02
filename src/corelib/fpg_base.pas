@@ -35,7 +35,7 @@ type
   TfpgCoord       = integer;     // we might use floating point coordinates in the future...
   TfpgColor       = type longword;    // Always in AARRGGBB (Alpha, Red, Green, Blue) format!!
   TfpgString      = type AnsiString;
-  TfpgChar        = type String[4];
+  TfpgChar        = {type }String[4];
 
   PPoint = ^TPoint;
 
@@ -132,8 +132,8 @@ var
   FPG_DEFAULT_SANS: string = 'Arial';
   {$ENDIF}
   {$IFDEF UNIX}
-  FPG_DEFAULT_FONT_DESC: string = 'Liberation Sans-10:antialias=true';
-  FPG_DEFAULT_SANS: string = 'Liberation Sans';
+  FPG_DEFAULT_FONT_DESC: string = 'Arial-8:antialias=true';
+  FPG_DEFAULT_SANS: string = 'Arial';
   {$ENDIF}
   FPG_DEFAULT_FIXED_FONT_DESC: string = 'Courier New-10';
 
@@ -1005,7 +1005,7 @@ uses
   process,
   dateutils,
   math,
-  synregexpr;
+  {syn}regexpr;
 
 
 const
